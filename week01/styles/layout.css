@@ -9,7 +9,7 @@ body {
 
 .parent {
     display: grid;
-    grid-template: auto 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: auto 1fr auto / auto 1fr auto;
 }
 
 header {
@@ -39,6 +39,7 @@ main {
 
 .aside {
     grid-column: 3/4;
+    padding: 2rem;
     background-color: antiquewhite;
     text-align: center;
 }
@@ -46,6 +47,7 @@ main {
 footer {
     grid-column: 1/4;
     background-color: rgb(16, 16, 78);
+    padding: 2rem;
     color: aquamarine;
     text-align: center;
 }
