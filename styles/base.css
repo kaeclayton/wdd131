@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(118, 209, 145);
+}
+
+body {
+    font-family: "Montserrat", Tahoma, Geneva, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 2rem;
+    grid-column: 1/4;
+}
+
+header span {
+    display: block;
+    font-family: Luminari;
+    font-size: xx-large;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+    margin: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+    border: 1px solid #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.wide {
+    grid-column: 1/3;
+}
+
+.narrow {
+    grid-column: 3/4;
+}
