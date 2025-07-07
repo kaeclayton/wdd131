@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(118, 209, 145);
+    
 }
 
 body {
@@ -13,30 +13,33 @@ body {
 header {
     padding: 2rem;
     grid-column: 1/4;
+    background-color: rgb(118, 209, 145);
 }
 
 header span {
     display: block;
     font-family: Luminari;
-    font-size: xx-large;
+    font-size: xxx-large;
     text-align: center;
 }
 
 nav {
-    background-color: blue;
     margin: auto;
+    padding: 1rem;
 }
 
-nav ul {
+.navigation {
+    background-color: blue;
     list-style-type: none;
     display: flex;
+    padding: 1rem;
 }
 
-nav ul li {
+.navigation li{
     flex: 1 1 100%;
 }
 
-nav a {
+.navigation a {
     display: block;
     color: #fff;
     text-align: center;
@@ -51,15 +54,40 @@ nav a:hover {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 800px;
+    max-width: 1200px;
     justify-content: center;
     margin: 2rem auto;
 }
 
+h1 {
+    font-family: luminari;
+    grid-column: 1/4;
+    justify-content: center;
+    text-align: center;
+}
+
+.card h2 {
+    background-color: rgb(118, 209, 145);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
 .wide {
     grid-column: 1/3;
+    padding: 3rem;
+    justify-content: center;
+    display: grid;
+    grid-template: auto 1fr / 2fr 1fr 2fr;
+}
+
+.wide img {
+    grid-column: 2/3;
+    align-items: right;
+    justify-items: right;
 }
 
 .narrow {
     grid-column: 3/4;
+    padding: 3rem;
+    justify-content: center;
 }
