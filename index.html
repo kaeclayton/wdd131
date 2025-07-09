@@ -12,68 +12,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script href="scripts/getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <span id="course-title"><h1>WDD 131 - Dynamic Web Fundamentals - Kae Clayton</h1></span>
-        <nav>
-            <ul class="navigation">
-                <li><a href="https://www.linkedin.com/feed/" title="LinkedIn">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" title="Canvas">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng" title="Favorite Scripture: 2 Nephi 31:20">Scripture</a></li>
-                <li><a href="#" title="Final Project">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="grid">
-        <main>
-            <section class="card" class="wide">
-                <h2>About Me</h2>
-                <p>
-                    My name is Kae Clayton. I grew up in Salt Lake City, Utah. I currently live with my family in Mesa, Arizona.
-                    My current job has many titles, Momma is the main one. I have five kids ranging in ages from 8-24.
-                    I love the time I spend with my family. I enjoy playing games, learning new languages and of new cultures and I expecially love building Lego.
-                    Being in nature is my favorite place to be, especially at the beach or in the mountains. I am really 
-                    enjoying going back to school and learning all the new things.
-                </p>
-                <div class="imgage">
-                    <img src="images/profile.jpg" alt="personal portrait" title="Picture of me">
-                </div>
-                <h3>Mesa, Arizona, USA</h3>
-                <img src="images/grandcanyon.jpg" alt="grand canyon" title="Grand Canyon">
-                <p>
-                    Arizona is one of the "younger" states in the USA.  It is known as the Grand Canyon State, being home to
-                    the famous wonder of the world, the Grand Canyon.  While many people think of Arizona as purely a hot
-                    desert wasteland there are 3,928 mountain peaks with 26 of those being over 10,000 feet tall. Some other 
-                    fun facts about Arizona is that we do not observe daylight savings and the state tree is the Palo Verde.
-                </p>
-            </section>
-            <section class="card" class="narrow">
-                <h2>Web Dev Resources</h2>
-                <nav>
-                    <ul class="resources">
-                        <li><a href="#" title="Dev.to Community">Dev.to Community</a></li>
-                        <li><a href="#" title="Smashing Magazone">Smashing Magazine</a></li>
-                        <li><a href="#" title="CSS Tricks">CSS Tricks</a></li>
-                        <li><a href="#" title="W3 Schools">W3 Schools</a></li>
-                        <li><a href="#" title="Udemy">Udemy</a></li>
-                        <li><a href="#" title="Image Placeholder">Image Placeholder</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </main>
+    <div class="container">
+        <header>
+            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+            <hr>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="https://www.linkedin.com/feed/" title="LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://byupw.instructure.com/" title="Canvas">Canvas</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng" title="Favorite Scripture: 2 Nephi 31:20">Scripture</a></li>
+                    <li><a href="#" title="Final Project">Final Project</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="grid">
+            <main>
+                <h1>Kae Clayton</h1>
+                <section class="card" class="wide">
+                    <h2>About Me</h2>
+                    <div class="profile-grid">
+                        <p>
+                            My name is Kae Clayton. I grew up in Salt Lake City, Utah. I currently live with my family in Mesa, Arizona.
+                            My current job has many titles, Momma is the main one. I have five kids ranging in ages from 8-24.
+                            I love the time I spend with my family. I enjoy playing games, learning new languages and of new cultures and I expecially love building Lego.
+                            Being in nature is my favorite place to be, especially at the beach or in the mountains. I am really 
+                            enjoying going back to school and learning all the new things.
+                        </p>
+                        <div class="image">
+                            <img src="images/profile.jpg" alt="personal portrait" title="Picture of me">
+                        </div>
+                        <h3>Arizona, USA</h3>
+                        <div class="image2">
+                            <img src="images/grandcanyon.jpg" alt="grand canyon" title="Grand Canyon">
+                        </div>
+                        <p>
+                            Arizona is one of the "younger" states in the USA.  It is known as the Grand Canyon State, being home to
+                            the famous wonder of the world, the Grand Canyon.  While many people think of Arizona as purely a hot
+                            desert wasteland there are 3,928 mountain peaks with 26 of those being over 10,000 feet tall. Some other 
+                            fun facts about Arizona is that we do not observe daylight savings and the state tree is the Palo Verde.
+                        </p>
+                    </div>    
+                </section>
+                <section class="card" class="narrow">
+                    <h2>Web Dev Resources</h2>
+                    <nav>
+                        <ul class="resources">
+                            <li><a href="https://developer.mozilla.org/en-US/" title="MDN Web Docs">MDN Web Docs</a></li>
+                            <li><a href="https://github.com/" title="Github">GitHub</a></li>
+                            <li><a href="https://squoosh.app/" title="Squoosh">Squoosh</a></li>
+                            <li><a href="https://www.w3schools.com/" title="W3 Schools">W3 Schools</a></li>
+                            <li><a href="https://www.udemy.com/" title="Udemy">Udemy</a></li>
+                            <li><a href="#" title="Image Placeholder">Image Placeholder</a></li>
+                        </ul>
+                    </nav>    
+                </section>
+            </main>
+        </div>    
+        <footer>
+            <p>
+                ©
+                <span id="currentyear"></span>
+                Kae Clayton
+                Arizona, USA
+            </p>
+            <p id="lastModified"></p>
+        </footer>
     </div>    
-    <footer>
-        <p>
-            ©
-            <span id="currentyear"></span>
-            Kae Clayton
-            Arizona, USA
-        </p>
-        <p id="lastModified"></p>
-    </footer>
 </body>
 
 </html>
