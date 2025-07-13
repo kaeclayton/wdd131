@@ -1,9 +1,9 @@
-const copyrightYear = document.querySelector('#copyright');
+const copyrightYear = document.querySelector('#currentyear');
 const lastModifiedElement = document.querySelector('#lastModified');
 
 if (copyrightYear) {
     const currentYear = new Date().getFullYear();
-    copyrightYear.innerHTML = `&copy; ${currentYear} | Kae Clayton | Arizona`;
+    copyrightYear.textContent = currentYear;
 }
 
 if (lastModifiedElement) {

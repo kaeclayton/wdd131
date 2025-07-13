@@ -4,6 +4,11 @@ body {
     line-height: 1.6;
 }
 
+header {
+    position: relative;
+    padding: 1rem;
+}
+
 header span {
     display: block;
     font-family: Luminari;
@@ -16,6 +21,7 @@ header span {
 nav ul {
     display: flex;
     flex-direction: column;
+    display: none;
     gap: 0.5rem;
     list-style: none;
     padding: 1rem;
@@ -29,7 +35,17 @@ nav a {
     border-radius: 4px;
 }
 
+nav a:hover,
+nav a:focus {
+    background-color: #5a6d5b;
+    outline: 2px solid #f8d3c5;
+}
+
 .hamburger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
     background: none;
     border: none;
     font-size: 1.8rem;
@@ -60,6 +76,7 @@ figure {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    height: 100%;
     border: 1px solid #667b68;
 }
 
@@ -70,20 +87,30 @@ figure img {
     object-position: center;
 }
 
+figcaption {
+    padding: 0.8rem;
+    text-align: center;
+    background: #a3b899;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 footer {
     grid-column: 1 / 4;
     min-height: auto;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
     justify-content: center;
     align-items: center;
     background-color: #667b68;
     text-align: center;
-    color: aliceblue;
+    color: white;
     margin-top: 2rem;
 }
 
 footer p {
-    margin: 0.5rem 1rem;
+    margin: 0.75rem 0;
     line-height: 1.3;
 }
 

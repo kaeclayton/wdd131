@@ -24,7 +24,6 @@ function setupHamburgerMenu() {
     }
 
     window.addEventListener('load', () => {
-        updateFooter();
         handleResize();
     });
     window.addEventListener('resize', handleResize);
