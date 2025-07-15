@@ -29,6 +29,7 @@ nav ul {
 
 nav a {
     color: white;
+    background-color: transparent;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 4px;
@@ -36,8 +37,9 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background-color: black;
-    outline: 2px solid #f8d3c5;
+    background-color: #fceee9;
+    color: #2a332a;
+    outline: 2px solid #fceee9;
 }
 
 .hamburger {
@@ -89,8 +91,8 @@ figure img {
 figcaption {
     padding: 0.8rem;
     text-align: center;
-    background: #dcedc8;
-    color: black;
+    background: #c8d5c8;
+    color: #2a332a;
     flex-grow: 1;
     width: 100%;
     box-sizing: border-box;
