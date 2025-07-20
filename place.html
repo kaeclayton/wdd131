@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uruguay</title>
+    <meta name="Author" content="Kae Clayton">
+    <meta name="description" content="A website displaying interesting facts about Uruguay">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Uruguay</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                <img src="images/hero-large.webp" alt="Picture of white lettering in the foreground spelling out 'Montevideo' and behind it the coastline with tall buildings behind that." width="1500" height="750">
+            </picture>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt><dd>176,215 sq km</dd>
+                <dt>Population:</dt><dd>3,499,451</dd>
+                <dt>Capital:</dt><dd>Montevideo</dd>
+                <dt>Languages:</dt><dd>Spanish, Uruguayan Sign Language</dd>
+                <dt>Currency:</dt><dd>Uruguayan Peso</dd>
+                <dt>Time Zone:</dt><dd>UTC-3</dd>
+                <dt>Calling Code:</dt><dd>+598</dd>
+                <dt>Internet TLD:</dt><dd>.uy</dd>
+            </dl>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div id="weather-data"></div>
+            <div class="weather-icon">
+                <img src="images/sunshine.svg" alt="Sunshine Icon" width="50" height="50">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©
+            <span id="currentyear"></span>
+            Kae Clayton
+            Arizona, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

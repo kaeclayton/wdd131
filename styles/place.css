@@ -1,0 +1,96 @@
+:root {
+    --background-color: #0038a8;
+    --color: white;
+    --solid-white: rgba(255, 255, 255, 1);
+    --border: 2px solid #7b3f00;
+    --border-radius: 8px;
+    --transparency: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fcd116;
+}
+
+header {
+    background-color: var(--background-color);
+    color: var(--color);
+    text-align: center;
+    padding: 1rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.data dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1rem;
+}
+
+.data,
+.weather {
+    position: static;
+    width: auto;
+    background-color: var(--solid-white);
+    color: var(--background-color);
+    border: 2px solid var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    background-color: var(--background-color);
+    color: var(--color);
+    text-align: center;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.weather-icon {
+    background-image: url('../images/your-icon.svg');
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.weather-icon img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.weather h2::after {
+    content: none;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--color);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
