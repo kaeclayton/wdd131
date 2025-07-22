@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazyload Practice</title>
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Title</h1>
+        <picture>
+            <img src="images/beach.webp" alt="beach" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/beach1.webp" alt="penguin on beach" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/beach2.webp" alt="coastline" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/beach3.webp" alt="sunset on the beach" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/beach4.webp" alt="blue ocean white beach" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/beach5.webp" alt="baby turtle on beach" loading="lazy" width="400" height="600">
+        </picture>
+    </main>
+    <footer>
+        <p>
+            ©
+            <span id="currentyear"></span>
+            Kae Clayton
+            Arizona, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
