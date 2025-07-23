@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    nav a:hover {
+        background-color: var(--pink-background);
+        color: var(--dk-color);
+        transform: translateY(-2px);
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    figure {
+        box-shadow: 0 2px 5px var(--pink-background);
+        transition: transform 0.3s;
+    }
+
+    figure:hover {
+        transform: scale(1.02);
+    }
+}

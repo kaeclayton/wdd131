@@ -1,0 +1,154 @@
+:root {
+    --dk-green-background: #3A5243;
+    --lt-green-background: #c8d5c8;
+    --pink-background: #fceee9;
+    --lt-color: white;
+    --dk-color: #2a332a;
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    padding: 1rem;
+}
+
+header span {
+    display: block;
+    font-family: Luminari;
+    font-size: xxx-large;
+    text-align: center;
+    background-color: var(--pink-background);
+    color: var(--dk-color);
+    margin: 0;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 1rem;
+    background-color: var(--dk-green-background);
+}
+
+nav a {
+    color: var(--lt-color);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--pink-background);
+    color: var(--dk-color);
+    outline: 2px solid var(--pink-background);
+}
+
+.hamburger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: block;
+}
+
+main {
+    padding: 1rem;
+    background-color: var(--pink-background);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--dk-color);
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.temple-card {
+    border: 1px solid var(--dk-green-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}   
+
+.temple-card:hover {
+    transform: translateY(-5px);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.temple-card figcaption {
+    padding: 15px;
+}
+
+.temple-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--dk-color);
+}
+
+.temple-card p {
+    margin: 5px 0;
+    color: var(--dk-color);
+    font-size: 0.9em;
+}
+
+figcaption {
+    padding: 0.8rem;
+    text-align: center;
+    background: var(--lt-green-background);
+    color: var(--dk-color);
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    min-height: auto;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dk-green-background);
+    text-align: center;
+    color: var(--lt-color);
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.75rem 0;
+    line-height: 1.3;
+}
+
+#currentyear {
+    font-size: 0.95rem;
+}
+
+#lastModified {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="author" content="Kae Clayton">
+    <meta name="description"
+        content="Browse and filter temples from the Church of Jesus Christ of Latter-day Saints">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span>Temple Album</span>
+        <nav>
+            <ul>
+                <li><a href="#" title="Home">Home</a></li>
+                <li><a href="#" title="Old Temples">Old</a></li>
+                <li><a href="#" title="New Temples">New</a></li>
+                <li><a href="#" title="Large Temples">Large</a></li>
+                <li><a href="#" title="Small temples">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="gallery">
+        <h1>Temple</h1>
+        <h2>Home</h2>
+        <div id="loading" style="display: none;">Loading temples...</div>
+    </main>
+    <footer>
+        <p>
+            ©
+            <span id="currentyear"></span>
+            Kae Clayton
+            Arizona, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
