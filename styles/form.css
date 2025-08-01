@@ -1,0 +1,159 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Root */
+:root {
+    --navy: navy;
+    --alice: aliceblue;
+    --green: green;
+    --red: rgba(221, 22, 22, 0.988);
+    --br: 8px;
+}
+
+/* Body */
+body {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, serif;
+}
+
+/* Header */
+header {
+    padding: 1rem 2%;
+    background-color: var(--alice);
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    border-radius: var(--br);
+    text-align: center;
+}
+
+/* Main */
+main {
+    padding: 0 1%;
+    min-height: 20rem;
+}
+
+/* Form Styling */
+.wf1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid var(--navy);
+    border-radius: var(--br);
+    padding: .25rem 2%;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+}
+
+.wf1 div {
+    padding-top: 1rem;
+}    
+
+.wf1 input[type="text"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea {
+    background-color: var(--alice);
+    display: block;
+    border: 1px solid var(--navy);
+    border-radius: var(--br);
+    padding: .75rem;
+    color: var(--green);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.wf1 label[for^="feature"] {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.wf1 label:has(+ .stars) {
+    margin-bottom: 0;
+}
+
+.wf1 label:has(input[type="checkbox"]) {
+    margin-bottom: 0.25rem;
+    padding-top: 0.5rem;
+}
+
+.wf1 label:has(+ label:has(input[type="checkbox"])) {
+    margin-top: 1.5rem;
+}
+
+.wf1 div:has(+ label:has(input[type="checkbox"])) {
+    margin-bottom: 0.5rem;
+}
+
+.wf1 textarea {
+    min-height: 150px;
+    resize: vertical;
+    color: var(--green);
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    background-color: var(--red);
+    color: #fff;
+    border-radius: var(--br);
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 1px 1px 4px #999;
+}
+
+/* Stars */
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    margin-top: 0;
+    margin-bottom: .25rem;
+}
+
+.stars>label {
+    color: var(--red);
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0);
+    /* remove blinking cursor*/
+}
+
+.stars>label:hover {
+    color: var(--green);
+}
+
+.stars>label::before {
+    content: "\2606";
+}
+
+.stars input:checked~label::before {
+    content: "\2605";
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
