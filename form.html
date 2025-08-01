@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Review Form</title>
     <meta name="author" content="Kae Clayton">
     <link rel="stylesheet" href="styles/form.css">
@@ -22,24 +22,30 @@
 
                 <label>Overall Rating* </label>
                 <div class="stars">
-                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                    <input type="radio" id="fivestar" name="stars" value="5" required aria-label="5 stars">
+                    <label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required aria-label="4 stars">
+                    <label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required aria-label="3 stars">
+                    <label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required aria-label="2 stars">
+                    <label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required aria-label="1 star">
+                    <label for="onestar"></label>
                 </div>
 
                 <label>Date of Installation* <input type="date" name="installDate" required></label>
 
                 <label>Which features did you find useful in the product?</label>
-                <div>(Check all that apply)</div>
-                <label><input type="checkbox" name="features" value="design"> Design</label>
-                <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                <label><input type="checkbox" name="features" value="eastOfUse"> Ease of Use</label>
-                <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                <div class="hint">(Check all that apply)</div>
+                <div><label><input type="checkbox" name="features" value="design"> Design</label>
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="eastOfUse"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                </div>
 
                 <label>Written Review (Optional)</label>
-                <label><textarea name="review" rows="5" placeholder="Share your thoughts about the product..."></textarea>
+                <textarea name="review" rows="5" placeholder="Share your thoughts about the product..."></textarea>
 
                 <label>Your Name (Optional)</label>
                 <input type="text" name="name">
