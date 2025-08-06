@@ -1,0 +1,738 @@
+[
+    {
+        "id": 1,
+        "name": "Salt Lake Temple",
+        "status": "visited",
+        "location": {
+            "city": "Salt Lake City",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1893-04-06",
+        "size": "253,000 sq ft",
+        "image": "images/salt-lake-temple.webp",
+        "imageFallback": "images/salt-lake-temple.jpg",
+        "architecturalStyle": "Gothic Revival",
+        "features": ["Six spires", "Granite construction"],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 2,
+        "name": "St. George Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "St. George",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1877-04-06",
+        "size": "110,000 sq ft",
+        "image": "images/st-george-temple.webp",
+        "imageFallback": "images/st-george-temple.jpg",
+        "architecturalStyle": "Pioneer",
+        "features": ["White sandstone", "Original pioneer temple", "Beautiful grounds"],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 3,
+        "name": "Logan Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "Logan",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1884-05-17",
+        "size": "119,619 sq ft",
+        "image": "images/logan-utah-temple.webp",
+        "imageFallback": "images/logan-utah-temple.jpg",
+        "architecturalStyle": "Gothic Revival",
+        "features": [
+            "Castle-like appearance",
+            "Spiral staircase",
+            "Historic organ"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 4,
+        "name": "Oquirrh Mountain Temple",
+        "status": "visited",
+        "location": {
+            "city": "South Jordan",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "2009-08-21",
+        "size": "60,000 sq ft",
+        "image": "images/oquirrh-mountain-temple.webp",
+        "imageFallback": "images/oquirrh-mountain-temple.jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Single spire",
+            "Beautiful stained glass",
+            "Extensive gardens"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 5,
+        "name": "Draper Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "Draper",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "2009-03-20",
+        "size": "57,000 sq ft",
+        "image": "images/draper-utah-temple.webp",
+        "imageFallback": "images/draper-utah-temple.jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Unique curved spire",
+            "Granite exterior",
+            "Panoramic valley views"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 6,
+        "name": "Jordan River Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "South Jordan",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1981-11-16",
+        "size": "148,236 sq ft",
+        "image": "images/jordan-river-temple.webp",
+        "imageFallback": "images/jordan-river-temple.jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Tall, slender central spire",
+            "White Marble Exterior",
+            "Large atrium with skylights"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 7,
+        "name": "Mount Timpanogos Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "American Fork",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1996-10-13",
+        "size": "107,240 sq ft",
+        "image": "images/mount-timpanogos-temple.webp",
+        "imageFallback": "images/mount-timpanogos-temple.jpg",
+        "architecturalStyle": "Modern with Gothic influences",
+        "features": [
+            "Bronze doors",
+            "Art glass windows",
+            "Granite exterior"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 8,
+        "name": "Bountiful Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "Bountiful",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1995-01-08",
+        "size": "104,000 sq ft",
+        "image": "images/bountiful-utah-temple.webp",
+        "imageFallback": "images/bountiful-utah-temple.jpg",
+        "architecturalStyle": "Modern/Classical",
+        "features": [
+            "Bethel white granite",
+            "Oval shaped Celestial room",
+            "Six-spire design"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 9,
+        "name": "Ogden Utah Temple",
+        "status": "visited",
+        "location": {
+            "city": "Ogden",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1972-01-18",
+        "size": "112,232 sq ft",
+        "image": "images/ogden-utah-temple.webp",
+        "imageFallback": "images/odgen-utah-temple.jpg",
+        "architecturalStyle": "Modern/Classical",
+        "features": [
+            "Large stained glass windows in celestial room",
+            "Spacious grounds with water features",
+            "Complete exterior reconstruction in 2014"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 10,
+        "name": "Provo Utah Rock Canyon Temple",
+        "status": "visited",
+        "location": {
+            "city": "Provo",
+            "state": "Utah",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1972-02-09",
+        "size": "currently unknown",
+        "image": ".jpg",
+        "architecturalStyle": "Brutalist/Modern",
+        "features": [
+            "No angel Moroni statue",
+            "Adjacent to BYU-Provo",
+            "Designed to blend with nearby mountains"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 11,
+        "name": "Denver Colorado Temple",
+        "status": "visited",
+        "location": {
+            "city": "Centennial",
+            "state": "Colorado",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1986-10-24",
+        "size": "29,117 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Six-spire design to resemble mountain peaks",
+            "Beautiful stained glass",
+            "Large atrium with natural light"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 12,
+        "name": "Gilbert Arizona Temple",
+        "status": "visited",
+        "location": {
+            "city": "Gilbert",
+            "state": "Arizona",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "2014-03-02",
+        "size": "85,326 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Spanish Colonial Revival",
+        "features": [
+            "Palm tree-lined walkways",
+            "Stained glass featuring Southwestern motifs",
+            "Intricate stonework on exterior"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 13,
+        "name": "Laie Hawaii Temple",
+        "status": "visited",
+        "location": {
+            "city": "Laie",
+            "state": "Hawaii",
+            "country": "United States",
+            "region": "Pacific"
+        },
+        "dedication": "1919-11-27",
+        "size": "47,224 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Polynesian Influence",
+        "features": [
+            "Tropical gardens",
+            "Fountain displays",
+            "BYU-Hawaii nearby"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 14,
+        "name": "Mesa Arizona Temple",
+        "status": "visited",
+        "location": {
+            "city": "Mesa",
+            "state": "Arizona",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1927-10-23",
+        "size": "75,000 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Spanish Colonial Revival",
+        "features": [
+            "Flat roof with sculpted friezes",
+            "Temple Christmas lights every year",
+            "Mesa Easter Pagent every year"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 15,
+        "name": "Newport Beach California Temple",
+        "status": "visited",
+        "location": {
+            "city": "Newport Beach",
+            "state": "California",
+            "country": "United States",  
+            "region": "North America"
+        },
+        "dedication": "2005-08-28",
+        "size": "17,800 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Single spire to resemble a lighthouse",
+            "White exterior with blue glass accents",
+            "Pacific Ocean views from upper floors"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 16,
+        "name": "Orlando Florida Temple",
+        "status": "visited",
+        "location": {
+            "city": "Windermere",
+            "state": "Florida",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1994-10-09",
+        "size": "70,000 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Stained glass with orange blossoms",
+            "Lush Florida landscaping",
+            "White Marble Exterior"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 17,
+        "name": "Portland Oregon Temple",
+        "status": "visited",
+        "location": {
+            "city": "Lake Oswego",
+            "state": "Oregon",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1989-08-19",
+        "size": "80,500 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Forest setting",
+            "Reflecting pool",
+            "Distinctive spires"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 18,
+        "name": "Washington DC Temple",
+        "status": "visited",
+        "location": {
+            "city": "Kensington",
+            "state": "Maryland",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1974-11-19",
+        "size": "160,000 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern",
+        "features": [
+            "Tallest LDS temple",
+            "Visitor center",
+            "Extensive gardens"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 19,
+        "name": "San Diego California Temple",
+        "status": "visited",
+        "location": {
+            "city": "San Diego",
+            "state": "California",
+            "country": "United States",
+            "region": "North America"
+        },
+        "dedication": "1993-04-25",
+        "size": "72,000 sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "Modern with Spanish Mission influences",
+        "features": [
+            "Twin spire design",
+            "Champa stone exterior (pale pink)",
+            "Visitor center with Christus statue"
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 20,
+        "name": "Halifax Nova Scotia Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 21,
+        "name": "Idaho Falls Idaho Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 22,
+        "name": "Kona Hawaii Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 23,
+        "name": "Manti Utah Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 24,
+        "name": "Bahia Blanca Argentina Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 25,
+        "name": "Montevideo Uruguay Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 26,
+        "name": "Monticello Utah Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 27,
+        "name": "Nauvoo Illinois Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 28,
+        "name": "Palmyra New York Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 29,
+        "name": "Payson Utah Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 30,
+        "name": "Phoenix Arizona Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 31,
+        "name": "Provo City Center Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 32,
+        "name": "Rexburg Idaho Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 33,
+        "name": "Rome Italy Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 34,
+        "name": "Snowflake Arizona Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    },
+    {
+        "id": 35,
+        "name": "Stockholm Sweden Temple",
+        "status": "wish list",
+        "location": {
+            "city": "",
+            "state": "",
+            "country": "",
+            "region": ""
+        },
+        "dedication": "",
+        "size": " sq ft",
+        "image": ".jpg",
+        "architecturalStyle": "",
+        "features": [
+            "",
+            "",
+            ""
+        ],
+        "attribution": "Photo by Church of Jesus Christ of Latter-day Saints"
+    }
+]
