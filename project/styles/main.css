@@ -1,0 +1,59 @@
+:root {
+    --jade: #00603F;
+    --charcoal: #333333;
+    --cream: #FCFCEF;
+    --plum: #6A0DAD;
+    --soft-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+}
+
+h1 {
+    color: var(--cream);
+    font-style: italic;
+}
+
+h2,
+h3 {
+    color: var(--jade);
+    border-bottom: none;
+}
+
+a {
+    color: var(--jade);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+header {
+    background-color: var(--plum);
+    color: var(--cream);
+    box-shadow: var(--soft-shadow);
+    padding: 1rem 0;
+    text-align: center;
+}
