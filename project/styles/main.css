@@ -33,16 +33,6 @@ h3 {
     border-bottom: none;
 }
 
-a {
-    color: var(--jade);
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-a:hover {
-    opacity: 0.8;
-}
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -57,3 +47,211 @@ header {
     padding: 1rem 0;
     text-align: center;
 }
+
+header nav {
+    margin-top: 1rem;
+}
+
+header nav a {
+    color: var(--cream);
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+header nav a.active {
+    border-bottom: 2px solid var(--cream);
+    font-style: italic;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Temple Card Styling */
+.temple-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.temple-card h3 {
+    color: var(--plum);
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Card Flip Container */
+.temple-card {
+    perspective: 1000px;
+    height: 400px;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: var(--soft-shadow);
+    cursor: pointer;
+    position: relative;
+}
+
+.temple-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.temple-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+/* Card Faces */
+.temple-card-front,
+.temple-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Front Face */
+.temple-card-front {
+    justify-content: flex-start;
+    background: white;
+    z-index: 2;
+}
+
+.temple-card-front img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Back Face */
+.temple-card-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    overflow-y: auto;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Content Styling Adjustments */
+.temple-card-back h3 {
+    color: var(--plum);
+    margin: 0 0 1rem 0;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+.temple-card-back p {
+    margin: 0.5rem 0;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.temple-features {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+}
+
+.temple-features ul {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.temple-features li {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--plum);
+    z-index: 3;
+}
+
+a, button, .temple-card {
+    min-height: 48px;
+    min-width: 48px;
+}
+
+.close-btn {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .temple-card {
+        height: 380px;
+    }
+
+    .temple-card-back {
+        padding: 1rem;
+    }
+
+    .temple-card-front img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .temple-card {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .temple-card-back {
+        padding: 0.8rem;
+    }
+}
+

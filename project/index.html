@@ -26,20 +26,73 @@
         </nav>
     </header>
     <main class="container">
-        <section>
-            <img src="images/salt-lake-hero.webp">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discovering Sacred Spaces</h2>
+                <p>Journey with me through temples I've visited and the spiritual experiences I've had within their walls.
+                </p>
+                <div class="hero-buttons">
+                    <a href="gallery.html" class="btn">Explore Temples</a>
+                    <a href="stories.html" class="btn btn-outline">Read Stories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/salt-lake-hero.webp" alt="Salt Lake Temple" loading="lazy" onerror="this.src='images/salt-lake-hero.jpg'">
+            </div>
         </section>
-        <section class="temple-filters">
-
+    
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Temples Visited</h3>
+                <p class="stat-number" id="visited-count">20</p>
+            </div>
+            <div class="stat-card">
+                <h3>Stories Shared</h3>
+                <p class="stat-number" id="stories-count">23</p>
+            </div>
+            <div class="stat-card">
+                <h3>Future Plans</h3>
+                <p class="stat-number" id="future-count">16</p>
+            </div>
         </section>
-
-        <section class="temple-grid">
-            <!-- Temple cards will be inserted here by JavaScript -->
-            <div class="loading">Loading temples...</div>
+    
+        <section class="featured-temples">
+            <a href="gallery.html" class="btn">View All Temples</a>
+        </section>
+    
+        <section class="featured-story">
+            <div class="story-content">
+                <h2>Featured Story</h2>
+                <h3 id="featured-story-title">Finally Visiting St. George</h3>
+                <p id="featured-story-excerpt">After years of trying, I finally got to visit the St. George Temple. The
+                    experience was more emotional than I ever expected...</p>
+                <a href="stories.html" id="featured-story-link" class="btn">Read Full Story</a>
+            </div>
+            <div class="story-image">
+                <img src="images/st-george-temple.webp" alt="St. George Temple" loading="lazy"
+                    onerror="this.src='images/st-george-temple.jpg'">
+            </div>
         </section>
     </main>
+    
     <footer>
-
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Sacred Stops</h3>
+                <p>A personal journal of temple experiences and reflections</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="stories.html">Stories</a>
+                <a href="future.html">Future Visits</a>
+            </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; <span id="current-year"></span> Kae Clayton. All rights reserved.</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 </html>

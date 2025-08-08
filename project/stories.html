@@ -47,28 +47,29 @@
         </div>
         
         <section class="add-story">
+            <h2>Have You Been to One of These Temples?</h2>
             <h2>Share Your Experience</h2>
             <form id="story-form">
                 <div class="form-group">
-                    <label for="story-temple">Temple:</label>
+                    <label for="story-temple">Temple: *</label>
                     <select id="story-temple" required>
                         <!-- Options will be added by JavaScript -->
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="story-date">Visit Date:</label>
-                    <input type="date" id="story-date" required>
+                    <label for="story-title">Visit Date: (optional)</label>
+                    <input type="date" id="story-date">
                 </div>
                 <div class="form-group">
-                    <label for="story-title">Title:</label>
+                    <label for="story-title">Title: *</label>
                     <input type="text" id="story-title" placeholder="A Special Day in Salt Lake" required>
                 </div>
                 <div class="form-group">
-                    <label for="story-content">Your Story:</label>
+                    <label for="story-content">Your Story: *</label>
                     <textarea id="story-content" rows="6" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="story-photos">Upload Photos:</label>
+                    <label for="story-photos">Upload Photos: (optional)</label>
                     <input type="file" id="story-photos" multiple accept="image/*">
                 </div>
                 <button type="submit">Share Story</button>

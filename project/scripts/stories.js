@@ -54,6 +54,7 @@ function displayStories(stories, temples) {
 
         grouped[templeName].forEach(story => {
             html += `<article class="story-card">
+                       ${story.date ? `<div class="story-date">${formatDate(story.date)}</div>` : ''}
                        <h3>${story.title}</h3>
                        <p>${story.content}</p>
                        ${story.memories ? `<div class="memory-tags">
@@ -68,19 +69,66 @@ function displayStories(stories, temples) {
 
     container.innerHTML = html || '<p>No stories found. Be the first to share!</p>';
 }
+//helper function for consistent date formatting
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+}
+
 document.getElementById('story-form').addEventListener('submit', function (e) {
     e.preventDefault();
+    
+    //basic validation
+    if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+    }
 
     const newStory = {
         id: 'story-' + Date.now(),
         templeId: parseInt(document.getElementById('story-temple').value),
+        date: document.getElementById('story-date').value || null,
         title: document.getElementById('story-title').value,
         content: document.getElementById('story-content').value,
         image: '' 
     };
 
-    // In a real app, save to server/database
-    console.log('New story:', newStory);
-    alert('Story saved! (In a real app, this would persist)');
+    try {
+        stories.push(newStory);
+        displayStories(stories, temples);
+
+        alert('Story submitted successfully!');
+        this.reset();
+    } catch (error) {
+        console.error('Error submitting story:', error);
+        alert('There was an error submitting your story. Please try again.');
+    }
+
+    console.log('New story with date:', newStory);
     this.reset();
+});
+
+// Save draft stories
+document.getElementById('story-form').addEventListener('input', function () {
+    const draft = {
+        title: document.getElementById('story-title').value,
+        content: document.getElementById('story-content').value,
+        templeId: document.getElementById('story-temple').value
+    };
+    localStorage.setItem('storyDraft', JSON.stringify(draft));
+});
+
+// Load draft on page load
+document.addEventListener('DOMContentLoaded', function () {
+    const draft = JSON.parse(localStorage.getItem('storyDraft'));
+    if (draft) {
+        document.getElementById('story-title').value = draft.title;
+        document.getElementById('story-content').value = draft.content;
+        document.getElementById('story-temple').value = draft.templeId;
+    }
+});
+
+// Clear on successful submission
+document.getElementById('story-form').addEventListener('submit', function () {
+    localStorage.removeItem('storyDraft');
 });

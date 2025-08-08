@@ -8,6 +8,7 @@
     {
         "id": "slc-2",
         "templeId": 1,
+        "date": "1999-05-22",
         "title": "My Wedding",
         "content": "It was May 22, 1999.  A beautiful sunny morning.  Our ceremony was early morning, I want to say at 7:30 am.  Brad and I didn't care, we were just excited to be getting married.  I remember getting to sit with him in the celestial room before we went into the sealing room to get sealed for time and all eternity.  I loved the peace I felt as I held his hand.  My sweet hubby."
     },
@@ -26,12 +27,14 @@
     {
         "id": "oquirrh",
         "templeId": 4,
+        "date": "2025-05-13",
         "title": "Jamison's Endowment",
         "content": "I got a sweet two for one travel experience with the Oquirrh Mountain Temple one day and the Draper Temple the next.  I travelled to Utah to go to my niece's wedding and got to go to the Oquirrh Mountain temple the day before to go through with my nephew on his first temple endowment experience."
     },
     {
         "id": "draper",
         "templeId": 5,
+        "date": "2025-05-14",
         "title": "Makenna's Wedding",
         "content": "What a way to experience a temple, going to it for a wedding.  My niece Makenna got married May 14, 2025 and I got to go be there for it.  One of the most amazing things about this temple is the views you have from the grounds, you can see the whole Salt Lake valley!"
     },
@@ -50,6 +53,7 @@
     {
         "id": "bountiful",
         "templeId": 8,
+        "date": "1999-02-13",
         "title": "Dani's Wedding",
         "content": "Dani got married in the Bountiful Utah Temple on February 13, 1999.  Dani is one of my best friends and the person I met my husband Brad through.  I remember wondering why they chose the Bountiful temple, but it wasn't hard to guess, this is a beautiful temple.  I remember all the plants and flowers outside were gorgeous."
     },
