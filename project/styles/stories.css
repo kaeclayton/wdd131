@@ -57,3 +57,41 @@ header {
     padding: 1rem 0;
     text-align: center;
 }
+
+/* Stories Layout */
+.stories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.temple-stories {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+}
+
+.story-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 1.5rem;
+}
+
+.story-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.story-card h3 {
+    color: var(--plum);
+    margin-top: 0;
+}
+
+.story-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
