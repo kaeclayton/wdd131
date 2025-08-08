@@ -1,102 +1,98 @@
 document.addEventListener('DOMContentLoaded', async function () {
+    // Update copyright and modified date
+    updateCopyrightAndModifiedDate();
+
     try {
         // Load temple data
         const response = await fetch('data/temples.json');
+        if (!response.ok) throw new Error('Network response was not ok');
         const temples = await response.json();
 
-        // Process all temple cards
-        document.querySelectorAll('.temple-card').forEach(card => {
-            const templeId = parseInt(card.getAttribute('data-id'));
-            const temple = temples.find(t => t.id === templeId);
-            if (!temple) return;
-
-            // Save the original HTML for the front face
-            const frontContent = card.innerHTML;
-
-            // Create the back face content with temple details
-            const backContent = `
-                <div class="temple-card-back">
-                    <button class="close-btn" aria-label="Close details">&times;</button>
-                    <h3>${temple.name}</h3>
-                    <p><strong>Location:</strong> ${temple.location.city}, ${temple.location.state || temple.location.country}</p>
-                    <p><strong>Dedicated:</strong> ${formatDate(temple.dedication)}</p>
-                    <p><strong>Size:</strong> ${temple.size}</p>
-                    <div class="temple-features">
-                        <h4>Notable Features:</h4>
-                        <ul>
-                            ${temple.features.map(f => `<li>${f}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-
-            // Wrap the existing content in the flip card structure
-            card.innerHTML = `
-                <div class="temple-card-inner">
-                    <div class="temple-card-front">
-                        ${frontContent}
-                    </div>
-                    ${backContent}
-                </div>
-            `;
-
-            // Update the image with proper src and fallback
-            const img = card.querySelector('.temple-card-front img');
-            if (img) {
-                img.src = temple.image;
-                img.onerror = function () {
-                    this.src = temple.imageFallback || 'images/default-temple.jpg';
-                };
-                img.style.height = '250px'; height
-                img.style.objectFit = 'cover'; 
-            }
-
-            // Add click event for flipping
-            card.addEventListener('click', function (e) {
-                // Don't flip if clicking on the close button
-                if (e.target.classList.contains('close-btn')) {
-                    this.classList.remove('flipped');
-                    return;
-                }
-
-                this.classList.toggle('flipped');
-
-                localStorage.setItem('lastViewedTemple', templeID);
-            });
-
-            // Add keyboard accessibility
-            card.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.classList.toggle('flipped');
-                }
-            });
-
-            // Make cards focusable for keyboard users
-            card.setAttribute('tabindex', '0');
-        });
+        // Initialize based on current page
+        if (document.querySelector('.gallery-container')) {
+            initGallery(temples);
+        }
+        if (document.querySelector('body').classList.contains('home-page')) {
+            loadHomePageData(temples);
+        }
 
     } catch (error) {
         console.error('Error loading temple data:', error);
-        const errorElement = document.createElement('div');
-        errorElement.className = 'error-message';
-        errorElement.textContent = 'Failed to load temple data. Please try again later.';
-        document.querySelector('.gallery-container').prepend(errorElement);
+        showError('Failed to load temple data. Please try again later.');
     }
 });
 
-function formatDate(dateString) {
-    if (!dateString || isNaN(new Date(dateString))) return 'Unknown date';
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
+function initGallery(temples) {
+    const container = document.querySelector('.gallery-container');
+    if (!container) return;
+
+    document.querySelectorAll('.temple-card').forEach(card => {
+        const templeId = parseInt(card.getAttribute('data-id'));
+        const temple = temples.find(t => t.id === templeId);
+        if (!temple) return;
+
+        // Front face content
+        const frontContent = card.innerHTML;
+
+        // Back face content
+        const backContent = `
+            <div class="temple-card-back">
+                <button class="close-btn" aria-label="Close details">&times;</button>
+                <h3>${temple.name}</h3>
+                <p><strong>Location:</strong> ${temple.location.city}, ${temple.location.state || temple.location.country}</p>
+                <p><strong>Dedicated:</strong> ${formatDate(temple.dedication)}</p>
+                <p><strong>Size:</strong> ${temple.size}</p>
+                <div class="temple-features">
+                    <h4>Features:</h4>
+                    <ul>${temple.features.map(f => `<li>${f}</li>`).join('')}</ul>
+                </div>
+            </div>
+        `;
+
+        // Create flip structure
+        card.innerHTML = `
+            <div class="temple-card-inner">
+                <div class="temple-card-front">${frontContent}</div>
+                ${backContent}
+            </div>
+        `;
+
+        // Set up image
+        const img = card.querySelector('img');
+        if (img) {
+            img.loading = 'lazy';
+            img.src = temple.image;
+            img.onerror = () => {
+                img.src = temple.imageFallback || 'images/default-temple.jpg';
+            };
+        }
+
+        // Flip functionality
+        card.addEventListener('click', (e) => {
+            if (e.target.classList.contains('close-btn')) {
+                card.classList.remove('flipped');
+                return;
+            }
+            card.classList.toggle('flipped');
+            localStorage.setItem('lastViewedTemple', templeId);
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (['Enter', ' '].includes(e.key)) {
+                e.preventDefault();
+                card.classList.toggle('flipped');
+            }
+        });
+
+        card.tabIndex = 0;
+    });
 }
 
-async function loadHomePageData() {
+async function loadHomePageData(temples) {
     try {
-        const [temples, stories] = await Promise.all([
-            fetch('data/temples.json').then(r => r.json()),
-            fetch('data/stories.json').then(r => r.json())
-        ]);
+        const storiesResponse = await fetch('data/stories.json');
+        if (!storiesResponse.ok) throw new Error('Failed to load stories');
+        const stories = await storiesResponse.json();
 
         // Update stats
         document.getElementById('visited-count').textContent =
@@ -105,14 +101,11 @@ async function loadHomePageData() {
         document.getElementById('future-count').textContent =
             temples.filter(t => t.status === 'wish list').length;
 
-        // Display featured story (most recent)
-        if (stories.length > 0) {
-            const featuredStory = stories.reduce((latest, story) => {
-                const storyDate = story.date ? new Date(story.date) : new Date(0);
-                const latestDate = latest.date ? new Date(latest.date) : new Date(0);
-                return storyDate > latestDate ? story : latest;
-            });
-
+        // Featured story
+        if (stories.length) {
+            const featuredStory = stories.reduce((latest, story) =>
+                new Date(story.date || 0) > new Date(latest.date || 0) ? story : latest
+            );
             document.getElementById('featured-story-title').textContent = featuredStory.title;
             document.getElementById('featured-story-excerpt').textContent =
                 featuredStory.content.substring(0, 150) + '...';
@@ -120,29 +113,34 @@ async function loadHomePageData() {
                 `stories.html?story=${featuredStory.id}`;
         }
 
-        const lastViewed = localStorage.getItem('lastViewedTemple');
-        if (lastViewed) {
-            console.log('Last viewed temple:', lastViewed);
-        }
-
-        // Update copyright year and last modified
-        const copyrightYear = document.getElementById('current-year');
-        const lastModifiedElement = document.getElementById('lastModified');
-
-        if (copyrightYear) {
-            copyrightYear.textContent = new Date().getFullYear();
-        }
-
-        if (lastModifiedElement) {
-            lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
-        }
-
     } catch (error) {
         console.error('Error loading home page data:', error);
+        showError('Failed to load some content. Please refresh the page.');
     }
 }
 
-// Call this when on home page
-if (document.querySelector('body').classList.contains('home-page')) {
-    loadHomePageData();
+function updateCopyrightAndModifiedDate() {
+    const yearEl = document.getElementById('current-year');
+    const modifiedEl = document.getElementById('lastModified');
+
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    if (modifiedEl) {
+        modifiedEl.textContent = `Last Modified: ${new Date(document.lastModified).toLocaleDateString()}`;
+    }
+}
+
+function showError(message) {
+    const errorEl = document.createElement('div');
+    errorEl.className = 'error-message';
+    errorEl.textContent = message;
+    document.querySelector('main')?.prepend(errorEl);
+}
+
+function formatDate(dateString) {
+    if (!dateString || isNaN(new Date(dateString))) return 'Unknown date';
+    return new Date(dateString).toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
 }
