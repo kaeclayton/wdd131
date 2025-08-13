@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,59 +10,81 @@
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
     <main>
-        <form method="get" action="review.html" class="wf1">
+        <form method="get" action="review.html" class="wf1" id="reviewForm">
             <fieldset>
-                <label>Product Name*</label>
-                    <select name="product" required>
-                        <option value="">Please Select</option>
-                    </select>
+                <legend>Product Information</legend>
 
-                <label>Overall Rating* </label>
-                <div class="stars">
-                    <input type="radio" id="fivestar" name="stars" value="5" required aria-label="5 stars">
-                    <label for="fivestar"></label>
-                    <input type="radio" id="fourstar" name="stars" value="4" required aria-label="4 stars">
-                    <label for="fourstar"></label>
-                    <input type="radio" id="threestar" name="stars" value="3" required aria-label="3 stars">
-                    <label for="threestar"></label>
-                    <input type="radio" id="twostar" name="stars" value="2" required aria-label="2 stars">
-                    <label for="twostar"></label>
-                    <input type="radio" id="onestar" name="stars" value="1" required aria-label="1 star">
-                    <label for="onestar"></label>
-                </div>
+                <label for="product">Product Name*</label>
+                <select name="product" id="product" required>
+                    <option value="">Please Select</option>
+                </select>
 
-                <label>Date of Installation* <input type="date" name="installDate" required></label>
+                <fieldset class="rating-fieldset">
+                    <legend>Overall Rating<span aria-hidden="true">*</span></legend>
+                    <div class="stars">
+                        <input type="radio" id="onestar" name="stars" value="1" required>
+                        <label for="onestar" aria-label="1 star"></label>
+                
+                        <input type="radio" id="twostar" name="stars" value="2">
+                        <label for="twostar" aria-label="2 stars"></label>
+                
+                        <input type="radio" id="threestar" name="stars" value="3">
+                        <label for="threestar" aria-label="3 stars"></label>
+                
+                        <input type="radio" id="fourstar" name="stars" value="4">
+                        <label for="fourstar" aria-label="4 stars"></label>
+                
+                        <input type="radio" id="fivestar" name="stars" value="5">
+                        <label for="fivestar" aria-label="5 stars"></label>
+                    </div>
+                </fieldset>
 
-                <label>Which features did you find useful in the product?</label>
-                <div class="hint">(Check all that apply)</div>
-                <div><label><input type="checkbox" name="features" value="design"> Design</label>
-                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                    <label><input type="checkbox" name="features" value="eastOfUse"> Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                </div>
+                <label for="installDate">Date of Installation*</label>
+                <input type="date" name="installDate" id="installDate" required>
 
-                <label>Written Review (Optional)</label>
-                <textarea name="review" rows="5" placeholder="Share your thoughts about the product..."></textarea>
+                <fieldset class="features-fieldset" aria-labelledby="features-label">
+                    <legend id="features-label">Which features did you find useful in the product?</legend>
+                    <div class="hint">(Check all that apply)</div>
+                    <div>
+                        <input type="checkbox" id="feature-design" name="features" value="design">
+                        <label for="feature-design">Design</label>
 
-                <label>Your Name (Optional)</label>
-                <input type="text" name="name">
+                        <input type="checkbox" id="feature-durability" name="features" value="durability">
+                        <label for="feature-durability">Durability</label>
+
+                        <input type="checkbox" id="feature-easeOfUse" name="features" value="easeOfUse">
+                        <label for="feature-easeOfUse">Ease of Use</label>
+
+                        <input type="checkbox" id="feature-performance" name="features" value="performance">
+                        <label for="feature-performance">Performance</label>
+                    </div>
+                </fieldset>
+
+                <label for="review">Written Review (Optional)</label>
+                <textarea name="review" id="review" rows="5"
+                    placeholder="Share your thoughts about the product..."></textarea>
+
+                <label for="name">Your Name (Optional)</label>
+                <input type="text" name="name" id="name">
             </fieldset>
             <input type="submit" value="Post My Review">
         </form>
     </main>
     <footer>
         <p>
-        ©
-        <span id="currentyear"></span>
-        Kae Clayton
-        Arizona, USA
+            ©
+            <span id="currentyear"></span>
+            Kae Clayton
+            Arizona, USA
         </p>
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
